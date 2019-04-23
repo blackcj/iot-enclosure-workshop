@@ -30,7 +30,7 @@ box_height = 20; // 20 mm
 //cylinder( h = 30, r = 20);
 
 // Increase the resolution of curved edges by assigning $fn to a value.
-//$fn = 24; // try using changing this to 10, 24, 48 or 64
+$fn = 12; // try using changing this to 10, 24, 48 or 64
 
 /*
     TRANSLATION
@@ -65,7 +65,7 @@ difference() {
     }
     
     // Micro usb slot
-    //translate([14.79,-1,7.1])cube([8.2,4,3.5]);
+    //#translate([14.79,-1,7.1])cube([8.2,4,4]);
 }
 
 /*
@@ -74,7 +74,8 @@ difference() {
 */
 
 module pcbMount() {
-    cylinder( h = 10, r = 3);
+    cylinder( h = 6, r = 3);
+    cylinder( h = 10, r = 2);
     cylinder( h = 12, r = 1.1);
 }
 
@@ -82,16 +83,16 @@ module pcbMount() {
 //pcbMount();
 
 module fourPcbMounts(pcb_width, pcb_depth) {
-    translate([10,4.3,0]) {
+    translate([10,4.65,0]) {
         pcbMount();
     }
-    translate([10 + pcb_width,4.3,0]) {
+    translate([10 + pcb_width,4.65,0]) {
         pcbMount();
     }
-    translate([10 + pcb_width,4.3 + pcb_depth,0]) {
+    translate([10 + pcb_width,4.65 + pcb_depth,0]) {
         pcbMount();
     }
-    translate([10,4.3 + pcb_depth,0]) {
+    translate([10,4.65 + pcb_depth,0]) {
         pcbMount();
     }
 }

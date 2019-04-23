@@ -3,8 +3,7 @@ enclosure_height = 55;
 enclosure_length = 90;
 enclosure_width = 15;
 
-handheld();
-//lipoSlim();
+lipoSlim();
 //lipoCylinder();
 
 
@@ -18,7 +17,7 @@ module lipoCylinder() {
     translate([7,4,12]) {
         rotate(90, [-1,0,0]) {
             rotate(4, [0,1,0]) {
-                #cylinder(r=9.35, h=71);
+                cylinder(r=9.35, h=71);
             }
         }
     }
@@ -29,14 +28,14 @@ module lipoSlim() {
     translate([0,2,4]) {
         rotate(90, [1,0,0]) {
             rotate(88, [0,1,0]) {
-                #cube([50.8, 33.5, 5.9]);
+                cube([50.8, 33.5, 5.9]);
             }
         }
     }
 }
 
 module handheld() {
-    minkowski() {
+    #minkowski() {
         linear_extrude(height = enclosure_height, center = false, convexity = 10, twist = 0) {
             triangle_points =[[0,0],[enclosure_width,2],[enclosure_width + 5,enclosure_length],[2,enclosure_length - 2]];
             triangle_paths =[[0,1,2,3]];
