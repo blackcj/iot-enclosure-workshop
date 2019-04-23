@@ -21,7 +21,7 @@ Start with the [tutorial.scad](tutorial.scad) file. There are instructions in th
 
 - [box-template.scad](box-template.scad) (beginner)
 - [circular-template.scad](circular-template.scad) (intermediate)
-- [rounded-template.scad](rounded-template.scad) (intermediate)
+- [rounded-box-template.scad](rounded-box-template.scad) (intermediate)
 - [camera-enclosure.scad](camera-enclosure.scad) (advanced)
 
 #### VARIABLES
